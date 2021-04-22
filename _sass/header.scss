@@ -1,0 +1,274 @@
+.menu {
+  background: #020304;
+  
+}
+
+.menu input + label {
+  position: fixed;
+  top: 30px;
+  left: 35px;
+  height: 9.6%;
+  width: 12%;
+  z-index: 5;
+}
+
+.menu input + label span {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  top: 32px;  
+  left: 0;
+  display: block;
+  background: #ffffff;
+  transition: 0.5s;
+  border-radius: 40px;
+}
+
+.label {
+  padding: 20px 20px;
+}
+
+.menu input + label span:first-child {
+  top: 1px;
+}
+
+.menu input + label span:last-child {
+  top: 16px;
+}
+
+.menu label:hover {
+  cursor: pointer;
+}
+
+.menu input:checked + label span {
+  opacity: 0;
+  top: 32px;
+}
+
+.menu input:checked + label span:first-child {
+  opacity: 1;
+  transform: rotate(405deg);
+}
+
+.menu input:checked + label span:last-child {
+  opacity: 1;
+  transform: rotate(-405deg);
+}
+
+.menu input ~ nav {
+  background: #2074E0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 3;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  overflow: hidden;
+}
+
+.menu input ~ nav > .menunavbar {
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  right: 12%;
+}
+
+.menu input ~ nav > .menunavbar {
+  opacity: 0;
+  transition: 0.5s;
+  
+  list-style-type: none;
+}
+
+.menu input:checked ~ nav {
+  height: 100%;
+ 
+}
+
+.menu input:checked ~ nav > .menunavbar {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.menu input:checked ~ nav > .imglogo2 {
+  opacity: 0;
+  transition-delay: 0.1s;
+}
+
+.burger{
+height: 100%;
+}
+
+.menu input:checked ~ .imglogo2 {
+opacity: 0;
+}
+/* ---------------------- Logo ---------------------*/
+
+.imglogo {
+width: 12%;
+height:auto;
+padding-top: 140%;
+padding-left: 43%;
+}
+
+.imglogo2 {
+position: fixed;
+width: 50px;
+height: auto;
+top: 23px;
+left: 47%;
+z-index: 9;
+margin-left: -15px;
+transition: opacity 0.5s;
+} 
+
+/*-------------------- trait séparation ------------------*/
+
+.separation{
+margin-top: 135%;
+margin-left: 20%;
+size: 60;
+width: 60%;
+height: 0; 
+position: absolute;
+background-color: white
+}
+
+
+
+/*------- texte menu --------*/
+
+.menu input ~ nav > .menunavbar {
+text-decoration: none;
+text-align: left;
+text-transform: uppercase;
+color: #ffffff;
+font-weight: 500;
+font-family: $font-family;
+display: block;
+padding: 10% 15%;
+}
+
+.menunavbardesktop {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: $font-family;
+  display: none;
+  padding: 10% 15%;
+  justify-content: space-between;
+  }
+
+
+/*------------------ code naja ----------------*/
+
+.menunavbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 500px;
+  a {
+    padding: 40px 0;
+  }
+}
+
+.menunavbarlink {
+  text-decoration: none;
+  color: #fff;
+  display: table;
+  padding: 20px;
+}
+
+.menunavbarlink::after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  background: #e06615;
+}
+
+.menunavbarlink:hover:after {
+visibility: visible;
+transform: scaleX(1);
+transition: 0.2s ease;
+}
+
+.menunavbar .menunavbarlink:hover {
+transition: 0.3s;
+}
+
+.menunavbarlink:hover {
+color: rgb(224, 102, 21);
+transition-duration: 0.3s;
+}
+
+@media screen and (min-width: 600px) {
+
+  .menunavbardesktop {
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: sans-serif;
+    display: flex;
+    padding: 20px;
+    margin-left: 80px;
+    justify-content: space-around;
+    }
+
+    .menunavbar {
+      width: 1px;
+    }
+
+    .menu input ~ nav > .menunavbar {
+      width: 1px;
+      padding: 0;
+    }
+
+    .imglogo2 {
+      left: 75px;
+    }
+
+    .menu input + label {
+      opacity: 0;
+      display: none;
+    }
+    /*
+    .menunavbardesktoplink::after {
+      content: '';
+      display: block;
+      visibility: hidden;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      background: #e06615;
+      }
+      
+      .menunavbardesktoplink:hover:after {
+      visibility: visible;
+      transform: scaleX(1);
+      transition: 0.2s ease;
+      }
+      
+      .menunavbardesktop .menunavbardesktoplink:hover {
+      transition: 0.3s;
+      } */
+      
+      .menunavbardesktoplink:hover {
+      color: rgb(224, 102, 21);
+      transition-duration: 0.3s;
+      }
+
+      .menunavbar a {
+        padding: 0;
+      }
+}

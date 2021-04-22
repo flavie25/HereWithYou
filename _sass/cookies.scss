@@ -1,0 +1,131 @@
+//@media all and (min-width:400px) {
+    .backgroundcookies{
+        margin-top: 100px;
+        height: 675px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .backgroundcookies::before{
+        background-color: rgba(255, 255, 255, 0.8);
+        filter: blur(4px);
+        position: relative;
+        z-index: 1;
+        
+    }
+
+    .textecookies {
+        justify-content: space-around;
+        width: 75%;
+        margin: auto;
+        margin-bottom: 10%;
+        margin-top: 10%;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 1.3em;
+        color: black;
+    }
+
+    .container-imagecookies {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    
+    .imagepopup {
+        margin: auto;
+        align-items: center;
+        width: 85%;
+        padding-bottom: 2%;
+    }
+    .cookiesaccepter {
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        border: none;
+        line-height: 2.5;
+        padding: 0 50px;
+        font-family: 'Montserrat', bold, sans-serif;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-style: bold;
+        text-align: center;
+        color: #fff;
+        border-radius: 20px;
+        background-color: #2074E0;
+        background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+    }
+
+
+    .cookiesaccepter:hover {
+        background-color: #E06615;
+        transition: 0.2s;
+    }
+
+    h4 .cookie{
+        text-align: center;
+        border: 0;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-family: 'Montserrat', bold, sans-serif;
+        font-size: 1.3em;
+        font-weight: 370;
+        text-align: center;
+    }
+
+    a{
+        color: #575757;
+    }
+
+
+//}
+@media all and (min-width:1200px) {
+    
+    .imagepopup{
+        margin: auto;
+        align-items: center;
+        width: 40%;
+        padding-top: 2%;
+
+    }
+
+
+    .textecookies{
+        font-size: 1.6em;
+        padding-top: 0%;
+        margin: auto;
+        padding-bottom: 3%;
+        width: 48%;
+
+    }
+
+    .cookiesaccepter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        border-radius: 35px;
+        line-height: 2.5;
+        padding: 0 75px;
+        font-family: 'Montserrat', bold, sans-serif;
+        font-size: 1.8rem;    
+    }
+    h4 {
+        width: 30%;
+        height: 80%;
+        padding-top: 10%;
+        margin: auto;
+        border: 0;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-family: 'Montserrat', bold, sans-serif;
+        text-align: center;
+    }   
+}
+

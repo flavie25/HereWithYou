@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>HereWithYou</title>
+    <link rel="icon" href="_sites/assets/images/icone_assos/LOGO FINIS.png" />
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+    
+
+    {% include commons/header.html %}
+    {% include commons/cookies/cookies.html %}
+
+    <div class="shapes-background">  
+      {% include bienvenue.html %}
+      {% include carrouseljs.html %}
+    </div>
+
+    <div class="shapes-tipsnoel">
+    {% include tipsNoel/tipscomplet.html %}
+    </div>
+    <div class="shapes-partenaires">    
+      {% include partenaire.html %}
+    </div>
+
+    {% include formulaire.html %}
+
+    {% include commons/Footer/footer.html %}
+    
+    <script src="assets/js/cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  
+    <script>    
+      var slider = tns({
+        container: ".my-slider",
+        items: 1,
+        nextButton: 'suivant',
+        controlsPosition: 'bottom',
+        navPosition: 'bottom',
+        controlsText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],  
+      });
+    </script>
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/formulaire.js"></script>
+    
+    
+  </body>
+</html>
